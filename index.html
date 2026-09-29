@@ -798,9 +798,19 @@ footer.site .brand b{color:#fff}footer.site .brand small{color:#bfb5ea}
 (function(){
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 
-  /* Real photos: add URLs here (hosted with the school's own site) and they replace the illustrations.
-     Keys: hero, art, music, sport, science, reading, outing, coding, gate.  Example: {hero:'photos/pupils.jpg'} */
-  var PHOTOS={};
+/* Real photos: add URLs here (hosted with the school's own site) and they replace the illustrations.
+      Keys: hero, art, music, sport, science, reading, outing, coding, gate.  Example: {hero:'photos/pupils.jpg'} */
+  var PHOTOS={
+    hero:'images/proprietress.jpg',
+    art:'images/classroom1.jpg',
+    music:'images/classroom2.jpg',
+    sport:'images/playground.jpg',
+    science:'images/science-lab.jpg',
+    reading:'images/library.jpg',
+    outing:'images/classroom1.jpg',
+    coding:'images/computer-lab.jpg',
+    gate:'images/proprietress.jpg'
+  };
   $$('[data-photo]').forEach(function(el){
     var url=PHOTOS[el.getAttribute('data-photo')]; if(!url) return;
     var img=new Image(); img.className='photo'; img.alt=el.getAttribute('data-alt')||'';
